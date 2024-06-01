@@ -1,0 +1,43 @@
+// C++ program for the above approach
+#include <bits/stdc++.h>
+using namespace std;
+
+// Function to find the minimum moves
+// required to reach origin from (a, b)
+void findMinMoves(int a, int b)
+{
+	// Stores the minimum number of moves
+	int ans = 0;
+
+	// Check if the absolute
+	// difference is 1 or 0
+	if (a == b || abs(a - b) == 1) {
+		ans = a + b;
+	}
+
+	else {
+
+		// Store the minimum of a, b
+		int k = min(a, b);
+
+		// Store the maximum of a, b
+		int j = max(a, b);
+
+		ans = 2 * k + 2 * (j - k) - 1;
+	}
+
+	// Print the answer
+	cout << ans;
+}
+
+// Driver Code
+int main()
+{
+	// Given co-ordinates
+	int a = 3, b = 5;
+
+	// Function Call
+	findMinMoves(a, b);
+
+	return 0;
+}

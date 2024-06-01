@@ -1,0 +1,486 @@
+Min Cost To Buy N Items
+Easy
+
+0/40
+Average time to solve is 10m
+SquadstackFlipkartOYO
++1 more companies
+Problem statement
+
+Send feedback
+Ninja Yuki is in the mood of shopping ninja blades today, and why should he not be, its finally the time for the Spring Fair in his Village. Initially, he has 0 number of blades and aims to buy ‘N’ of them from the fair. But the blade shopkeeper being a cunning man himself, presents a weird way of pricing the number of ninja blades Yuki can buy.
+
+Suppose at any instance Yuki has ‘K’ number of blades, then:
+
+1) Yuki can buy 1 more blade with cost 'A.’ He now has ‘K+1’ Ninja blades.
+2) Yuki could buy a ‘K’ number of blades with cost 'B.’ He now has ‘2*K’ blades.
+where 'A' and 'B' are predefined and constant.
+Yuki does not want to get robbed in the fair. Being his nerd friend can you tell him the minimum price he needs to pay to buy exactly ‘N’ ninja blades, considering he has 0 blades initially?
+
+Note:
+
+There can be two or more ways with the exact cost. You can consider any one of them, but the overall cost to reach from 0 to 'N' must be minimized.
+For example:
+
+Consider Yuki need to buy 5 blades, the cost of adding 1 blade is 2, and the cost of doubling the blades is 1 then you have to perform the following operations:
+1) Doubling 0 will result in 0 only, so add 1 blade to 0 blades with cost 2. Total cost becomes 2.
+
+2) Next, you can either double 1 to reach 2 or add 1 blade. But since the cost of doubling is less than that of adding, so double 1 with cost 1. Total cost becomes 3.
+
+3) Doubling 2 will result in 4 with a cost of 1. Total becomes 4.
+
+4) Adding 1 in 4 will result in 5 (which is the desired number) with a cost of 2. The total cost to reach 5 becomes 6.
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints:
+1 <= ‘T’ <= 100
+1 <= 'N' <= 10^4
+0 <= 'A','B' <= 10^3
+
+Time limit: 1 second
+Sample Input 1:
+3
+13 5 8
+1 5 8
+2 5 3    
+Sample Output 1:
+36
+5
+8
+Explanation of Input 1:
+(i)For the first test case:
+ Possible series of operations we need to perform: (+1) -> (+1) -> (+1) -> (*2) -> (*2) -> (+1)
+ So minimum cost: 5+5+5+8+8+5 = 36
+
+(ii)For the second test case:
+Possible series of operations we need to perform: (+1)
+So minimum cost: 5 
+
+(iii)For the second test case:
+Possible series of operations we need to perform: (+1) -> (*2) 
+So minimum cost: 5+3 = 8
+Sample Input 2:
+5
+1 2 2
+2 17 2
+3 3 4
+4 2 1
+5 5 8
+Sample Output 2
+2
+19
+9
+4
+23
+Explanation of Input 1:
+(i)For the first test case:
+ Possible series of operations we need to perform: (+1)
+So minimum cost: 2
+Operations: (+1) Cost: 2
+
+(ii)For the second test case:
+ Possible series of operations we need to perform: (+1) -> (*2) 
+ So minimum cost: 17 + 2 = 19
+
+(iii)For the third test case:
+ Possible series of operations we need to perform: (+1) -> (+1) -> (+1)
+ So minimum cost: 3+3+3 = 9
+
+(iv) For the first test case:
+ Possible series of operations we need to perform: (+1) -> (*2) -> (*2)
+ So minimum cost: 2 + 1 + 1 = 4
+
+(v) For the first test case:
+ Possible series of operations we need to perform: (+1) -> (+1) -> (*2) -> (+1)
+ So minimum cost: 5+5+8+5 = 23
+
+
+ ------------------------------------------------
+ Maximum Path Sum in the matrix
+Moderate
+
+0/80
+Average time to solve is 35m
+AmazonPaypalMicrosoft
++8 more companies
+Problem statement
+
+Send feedback
+You have been given an N*M matrix filled with integer numbers, find the maximum sum that can be obtained from a path starting from any cell in the first row to any cell in the last row.
+
+From a cell in a row, you can move to another cell directly below that row, or diagonally below left or right. So from a particular cell (row, col), we can move in three directions i.e.
+
+Down: (row+1,col)
+Down left diagonal: (row+1,col-1)
+Down right diagonal: (row+1, col+1)
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints :
+1 <= T <= 50
+1 <= N <= 100
+1 <= M <= 100
+-10^4 <= matrix[i][j] <= 10^4
+
+Where 'T' is the number of test cases.
+Where 'N' is the number of rows in the given matrix, and 'M' is the number of columns in the given matrix.
+And, matrix[i][j] denotes the value at (i,j) cell in the matrix.
+
+Time Limit: 1sec
+Input 1 :
+2
+4 4
+1 2 10 4
+100 3 2 1
+1 1 20 2
+1 2 2 1
+3 3
+10 2 3
+3 7 2
+8 1 5
+Output 1 :
+105
+25
+Explanation Of Input 1 :
+In the first test case for the given matrix,
+Example
+
+The maximum path sum will be 2->100->1->2, So the sum is 105(2+100+1+2).
+
+In the second test case for the given matrix, the maximum path sum will be 10->7->8, So the sum is 25(10+7+8).
+Input 2 :
+2
+3 3
+1 2 3
+9 8 7
+4 5 6
+4 6
+10 10 2 -13 20 4
+1 -9 -81 30 2 5
+0 10 4 -79 2 -10
+1 -5 2 20 -11 4
+Output 2 :
+17
+74
+Explanation Of Input 2 :
+In the first test case for the given matrix, the maximum path sum will be 3->8->6, So the sum is 17(3+8+6).
+
+In the second test case for the given matrix, the maximum path sum will be 20->30->4->20, So the sum is 74(20+30+4+20).
+
+----------------------------------------
+ Count Number of Subsequences
+Moderate
+
+0/80
+Average time to solve is 15m
+AccentureTata CommunicationsAmazon
++12 more companies
+Problem statement
+
+Send feedback
+Given an array of non-negative integers ‘A’ and an integer ‘P’, find the total number of subsequences of ‘A’ such that the product of any subsequence should not be more than ‘P’.
+
+A subsequence is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.
+Note
+You need to print your answer modulo 10^9 + 7.
+For Example
+Let us take  A = [1,2,3] and P = 4. 
+All the subsequences not having product more than ‘4’ are {1}, {2}, {3}, {1,2}, {1,3}. Therefore count is equal to ‘5’.
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints
+1 <= T <= 10
+1 <= N <= 10^3
+1 <= A[i] <= 10^3
+1 <= P <= 10^3
+
+Where A[i] is array element at index ‘i’,  ‘P’ is product value.
+The Sum of 'N' over all test cases is <= 10 ^ 3.
+
+Time Limit: 1 sec
+Sample Input 1:
+2
+3 8
+2 3 5  
+4 10
+15 20 30 25 
+Sample Output 1:
+4
+0
+Explanation For Sample Input 1:
+Test Case 1: The given array is [2,3,5]. 
+All the possible subsequences of this array are {2}, {3}, {5}, {2,3}, {2,5}, {3,5}, {2,3,5}. But product of elements of subsequence {2,5}, {3,5}, {2,3,5} is more than p i.e 8. Therefore required count is 4.
+
+Test Case 2: The given array is [15, 20. 30, 25] and p=10. 
+As all the subsequences have product more than10’. So answer equals 0.    
+Sample Input 2
+2
+5 6
+2 7 3 6 1
+6 24
+1 5 4 9 8 16
+Sample Output 2
+9
+13
+Explanation For Sample Input 2:
+Test Case 1: The given array is [2, 7, 3, 6, 1]. 
+The total number of subsequences having product less than 6 are 9.
+
+Test Case 2: The given array is [1, 5, 4, 9, 8, 16] 
+The total number of subsequences having product less than 24 are 13.
+
+------------------------------------------------------------------
+
+Dichotomy
+Moderate
+
+0/80
+Average time to solve is 28m
+undefined
+Problem statement
+
+Send feedback
+There are 'N' days. You are given an array 'A' of length 'N', representing the scores of the 'N' days.
+
+You are working on each of these days, and your mood can be either good or bad. A "mood assignment" is the collection of your mood on all 'N' days.
+
+If your mood is good on a given day, its score is added to the total score. On the other hand, if your mood is bad on a given day, its score is subtracted from the total score. If your total score ever reaches a negative number, you just forget about the negative sign and replace it with its absolute value.
+
+Your boss will be satisfied if the final score has a non-zero bitwise AND with 'K'. Count the number of unique mood assignments that satisfy your boss. Return the answer modulo 10^9 + 7.
+
+For Example :
+Let 'N' = 2, 'A' = [ 5, 3 ], 'K' = 3.
+There are 4 possible mood assignments.
+1. [ Good, Good ] resulting in a score of '8'.
+2. [ Good, Bad ] resulting in a score of '2'.
+3. [ Bad, Good ] resulting in a score of '8'.
+4. [ Bad, Bad ] resulting in a score of '2'.
+Exactly 2 Assignments, '2' and '4', satisfy your boss.
+Thus, the answer is '2'.
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints :
+1 <= 'T' <= 10
+1 <= 'N' <= 100
+1 <= 'A[i], K' <= 10^4
+
+Time Limit: 1 sec
+Sample Input 1 :
+2
+3 4
+4 9 2
+3 1
+1 2 3
+Sample Output 1 :
+4
+0
+Explanation of sample input 1 :
+First test case:-
+The following mood assignments satisfy the boss:
+1. [ Good, Good, Good ] resulting in a score of '15'.
+2. [ Bad, Good, Good ] resulting in a score of '15'.
+3. [ Bad, Bad, Good ] resulting in a score of '7'.
+4. [ Good, Bad, Good ] resulting in a score of '7'.
+It can be shown that all other mood assignments do not satisfy your boss.
+Thus, the answer is '4'.
+
+Second test case:-
+It can be shown that no mood assignment can satisfy your boss.
+Thus, the answer is '0'.
+Sample Input 2 :
+2
+5 9
+11 3 7 9 6
+5 6
+100 16 13 1 4
+Sample Output 2 :
+12
+32
+
+-------------------------------------------------------------
+
+ Palindromic Substrings
+Moderate
+
+0/80
+Average time to solve is 20m
+CognizantPaytm (One97 Communications Limited)Tata Consultancy Services (TCS)
++24 more companies
+Problem statement
+
+Send feedback
+You have been given a string STR. Your task is to find the total number of palindromic substrings of STR.
+
+Example :
+If the input string is "abbc", then all the possible palindromic substrings would be: ["a", "b", "b", c", "bb"] and hence, the output will be 5 since we have 5 substrings in total which form a palindrome.
+Note :
+A string is said to be a 'Palindrome' if it is read the same forwards and backwards. 
+For example, “abba” is a palindrome, but “abbc” is not.
+
+A 'Substring' is a contiguous sequence of characters within a string. 
+For example, "a", "b", "c", "ab", "bc", "abc" are substrings of "abc".
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints :
+1 <= t <= 100
+0 <= N <= 1000
+
+Where 't' is the number of test cases, 'N' is the length of the given string.
+Time Limit: 1 sec.
+Sample Input 1 :
+1
+abc
+Sample Output 1 :
+3
+Explanation For Sample Output 1:
+All the substrings of the given string are "a", "b", "c", "ab", "bc", "abc".
+The plaindromics substrings are "a", "b", "c". So the output will be 3.   
+Sample Input 2 :
+1
+aaa
+Sample Output 2 :
+6
+
+--------------------------------------------------------------------------------
+
+ Best Time to Buy and Sell Stock IV
+Hard
+
+0/120
+Average time to solve is 20m
+Disney + HotstarAmazonOracle
++11 more companies
+Problem statement
+
+Send feedback
+You have been given an array 'PRICES' consisting of 'N' integers where PRICES[i] denotes the price of a given stock on the i-th day. You are also given an integer 'K' denoting the number of possible transactions you can make.
+
+Your task is to find the maximum profit in at most K transactions. A valid transaction involves buying a stock and then selling it.
+
+Note
+You can’t engage in multiple transactions simultaneously, i.e. you must sell the stock before rebuying it.
+For Example
+Input: N = 6 , PRICES = [3, 2, 6, 5, 0, 3] and K = 2.
+Output: 7
+
+Explanation : The optimal way to get maximum profit is to buy the stock on day 2(price = 2) and sell it on day 3(price = 6) and rebuy it on day 5(price = 0) and sell it on day 6(price = 3). The maximum profit will be (6 - 2) + (3 - 0) = 7.
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints
+1 <= T <= 100
+1 <= N <= 5000
+0 <= K <= N/2
+0 <= ARR[i] <=10^5
+
+Time Limit : 1 sec
+Sample Input 1
+2
+5 2
+8 5 1 3 10
+4 2
+10 8 6 2 
+Sample Output 1
+9
+0
+Explanation for Sample 1
+Test Case 1: In this case, we can make a maximum of 2 transactions. The optimal way to get maximum profit is to make only 1 transaction, i.e., buy the stock on day 3 (price = 1) and sell it on day 5(price = 10). The profit will be 10 - 1 = 9.
+
+Test Case 2: In the second test case, we can make a maximum of 2 transactions. The optimal way to get maximum profit is to make 0 transactions because the price of stock is continuously decreasing and we will have a loss if we buy and sell the stock.
+Sample Input 2
+2
+4 0
+2 6 5 2
+4 2
+1 2 3 5
+Sample Output 2
+0
+4
+
+-----------------------------------------------------------
+
+ Russian Doll Envelopes
+Hard
+
+0/120
+Average time to solve is 50m
+DunzoPaypalHSBC
++6 more companies
+Problem statement
+
+Send feedback
+You are given a set of ‘N’ rectangular envelopes. The height and width of each envelope are given by arrays, ‘height’ and ‘width’ respectively, each consisting of ‘N’ positive integers. The height, width of the ith envelope is given by ‘height[i]’ and ‘width[i]’ respectively.
+
+You can put one envelope inside another envelope if and only if both the height and width of one envelope is strictly greater than the height and width of the other envelope.
+
+What is the maximum number of envelopes you can Russian doll? (put one inside other)
+
+Note
+Rotation of envelope is not allowed, that is, height and width can’t be exchanged
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints:
+1 <= T <= 50
+1 <= n <= 10^4
+1 <= height[i] <= 10^9
+1 <= width[i] <= 10^9
+
+Time Limit: 2 sec
+Sample Input 1:
+2
+4
+5 6 6 2
+4 4 7 3
+2
+2 1 
+2 1
+Sample Output 1:
+3 
+2
+Explanation For Sample Output 1:
+Test Case 1:
+The number envelopes, ‘N’ = 4 
+‘height’ = {5, 6, 6, 2}
+‘width’= {4, 4, 7, 3}
+Let denote dimensions of the envelope in (Height, Width) manner then, one way of Russian Doll envelopes in outermost to the innermost manner is as follow:
+
+Select the third envelope, i.e., envelope with dimensions (6, 7) as the outermost envelope.
+
+Place the first envelope i.e envelope with dimensions (5, 4) inside the outermost envelope. You can do this because both the height and width of this envelope is strictly less than the outermost envelope.
+
+Place the fourth envelope i.e envelope with dimensions (2, 3) inside the previous envelope.
+
+In this way, we can Russian Doll 3 envelopes. 
+
+No other way can Russian Doll more than 3 envelopes.
+
+Test Case 2:
+You can put the second envelope inside the first envelope because both the height and width of the second envelope are strictly less than the first envelope.
+Sample Input 2:
+ 2
+ 1
+ 2
+ 3
+ 3
+ 1 1 1
+ 1 1 1
+Sample Output 2:
+ 1
+ 1
+
+ -----------------------------------------------------
+
+Matrix Chain Multiplication
+Hard
+
+0/120
+undefined
+Problem statement
+
+Send feedback
+Given a chain of matrices A1, A2, A3,.....An, you have to figure out the most efficient way to multiply these matrices. In other words, determine where to place parentheses to minimize the number of multiplications.
+
+You will be given an array p[] of size n + 1. Dimension of matrix Ai is p[i - 1]*p[i]. You need to find minimum number of multiplications needed to multiply the chain.
+
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+3
+10 15 20 25
+Sample Output 1:
+8000
+Sample Output Explanation:
+There are two ways to multiply the chain - A1*(A2*A3) or (A1*A2)*A3.
+If we multiply in order- A1*(A2*A3), then number of multiplications required are 11250.
+If we multiply in order- (A1*A2)*A3, then number of multiplications required are 8000.
+Thus minimum number of multiplications required are 8000. 
