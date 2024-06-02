@@ -146,12 +146,10 @@ public:
         // code here
         // needs to check two thing CBT && maxheap
         int count = countNodes(tree);
-
         if (isCBT(tree, 0, count) && isMaxHeap(tree))
         {
             return true;
         }
-
         return false;
     }
 };
