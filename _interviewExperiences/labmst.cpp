@@ -38,7 +38,8 @@ class Solution {
                 if(frontNode->left) q.push(frontNode);
                 if(frontNode->right) q.push(frontNode);
             }
-level++;
+			
+			level++;
         }
 
         return false;
