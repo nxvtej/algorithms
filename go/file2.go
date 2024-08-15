@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"github.com/nxvtej/algorithms/blob/main/go/file1.go"
+	"github.com/nxvtej/algorithms/blob/main/go"
 )
 
 func main() {
 
 	fmt.Println("starting of f2")
-	fmt.Println(comingfromgithub)
-	fmt.Println(AnotherExportedVariable)
+	fmt.Println(file1.comingfromgithub)
+	fmt.Println(file1.AnotherExportedVariable)
 }
