@@ -35,6 +35,9 @@ int main()
     int n = arr.size();
 
     int k = 2;
+    static int temp;
+    cout << "\n :: \n"
+         << temp;
     int count = findSubarraysWithKdifferentIntegers(arr, n, k);
     cout << "\n count " << count;
     return 0;
