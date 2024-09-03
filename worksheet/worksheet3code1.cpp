@@ -1,12 +1,12 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 class abc
 {
-  
-   public :
-   abc* get(void)
+
+public:
+   abc *get(void)
    {
-      return this ;
+      return this;
       // cout<<"the addres of the object via function is  : "<<a;
    }
 };
@@ -14,9 +14,9 @@ class abc
 int main()
 {
    abc a;
-   cout<<"the address of the object in main is : "<<&a<<endl;
+   cout << "the address of the object in main is : " << &a << endl;
    abc *c;
-   c=a.get();
-   cout<<"the address of the object comming from class function : "<<c<<endl;
-   return 0 ;
+   c = a.get();
+   cout << "tobject comming from class  : " << c << endl;
+   return 0;
 }
