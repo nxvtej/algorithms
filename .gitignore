@@ -1,2 +1,8 @@
+# Ignore executable files
 *.exe
+
+# Ignore Java class files
 *.class
+
+# Ignore the entire system_design folder
+./system_design/*
