@@ -5,4 +5,4 @@
 *.class
 
 # Ignore the entire system_design folder
-./system_design/*
+./system_design
