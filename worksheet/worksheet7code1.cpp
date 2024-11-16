@@ -1,4 +1,4 @@
-//  overloading unary operator (-) via member function 
+//  overloading unary operator (-) via member function
 /*
 #include<iostream>
 using namespace std;
@@ -24,7 +24,7 @@ class operator_new
 
     void operator - ()
     {
-        pnumber = -pnumber ; 
+        pnumber = -pnumber ;
         dnumber = -dnumber ;
     }
 };
@@ -35,12 +35,12 @@ void operator_new :: print_data()
     cout<<"pnumber = "<<pnumber<<endl;
     cout<<"dnumber = "<<dnumber<<endl;
     // cout<<"code ends here ! ";
-} 
+}
 
 int main(void)
 {
     cout<<"initial values "<<endl;
-    operator_new navdeep(22 , 32) ; 
+    operator_new navdeep(22 , 32) ;
     navdeep.print_data();
 
     cout<<"values after the - unary operator overloading "<<endl;
@@ -51,23 +51,23 @@ int main(void)
 }
 */
 // overloading unary operator (-) via friend function
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class operator_new ;
+class operator_new;
 class operator_old
 {
-    private :
-    int pnumber , dnumber ;
+private:
+    int pnumber, dnumber;
 
-    public :
+public:
     operator_old()
     {
-        pnumber = 0 ;
-        dnumber = 0 ;
+        pnumber = 0;
+        dnumber = 0;
     }
 
-    operator_old (int pnumber , int dnumber)
+    operator_old(int pnumber, int dnumber)
     {
         this->pnumber = pnumber;
         this->dnumber = dnumber;
@@ -75,20 +75,20 @@ class operator_old
 
     void print_data();
 
-    void friend operator - (operator_new &object1 , operator_old &object2) ;
+    void friend operator-(operator_new &object1, operator_old &object2);
 };
 class operator_new
 {
-    private :
-    int pnumber , dnumber ;
+private:
+    int pnumber, dnumber;
 
-    public :
+public:
     operator_new()
     {
-        pnumber = 0 ;
-        dnumber = 0 ;
+        pnumber = 0;
+        dnumber = 0;
     }
-    operator_new(int pnumber , int dnumber)
+    operator_new(int pnumber, int dnumber)
     {
         this->pnumber = pnumber;
         this->dnumber = dnumber;
@@ -96,50 +96,49 @@ class operator_new
 
     void print_data();
 
-    void friend operator - (operator_new &object1 , operator_old &object2) ;
+    void friend operator-(operator_new &object1, operator_old &object2);
 };
 
-void operator_new :: print_data()
+void operator_new ::print_data()
 {
-    cout<<"here is the values of operator_new class "<<endl;
-    cout<<"pnumber = "<<pnumber<<endl;
-    cout<<"dnumber = "<<dnumber<<endl;
+    cout << "here is the values of operator_new class " << endl;
+    cout << "pnumber = " << pnumber << endl;
+    cout << "dnumber = " << dnumber << endl;
     // cout<<"code ends here ! ";
-} 
+}
 
-
-void operator_old :: print_data()
+void operator_old ::print_data()
 {
-    cout<<"here is the values of operator_old class "<<endl;
-    cout<<"pnumber = "<<pnumber<<endl;
-    cout<<"dnumber = "<<dnumber<<endl;
+    cout << "here is the values of operator_old class " << endl;
+    cout << "pnumber = " << pnumber << endl;
+    cout << "dnumber = " << dnumber << endl;
     // cout<<"code ends here ! ";
-} 
+}
 
-void operator - (operator_new &object1 , operator_old &object2)
+void operator-(operator_new &object1, operator_old &object2)
 {
     object1.dnumber = -object1.dnumber;
     object1.pnumber = -object1.pnumber;
     object2.dnumber = -object2.dnumber;
     object2.pnumber = -object2.pnumber;
-
 }
-
 
 int main(void)
 {
-    cout<<"initial values "<<endl;
-    operator_new navdeep(-34 , 23) ; 
+    cout << "initial values " << endl;
+    operator_new navdeep(-34, 23);
     navdeep.print_data();
-    operator_old navtej(-21 , 32) ; 
+    operator_old navtej(-21, 32);
     navtej.print_data();
 
-    cout<<"values after the - unary operator overloading "<<endl;
-    operator - (navdeep , navtej);
+    cout << "values after the - unary operator overloading " << endl;
+    // operator-(navdeep, navtej);
+
+    navdeep - navtej;
     navdeep.print_data();
     navtej.print_data();
 
-    cout<<"code ends\n";
+    cout << "code ends\n";
 }
 
 /*

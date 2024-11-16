@@ -39,8 +39,6 @@ public:
                 TreeNode *currentNode = q.front();
                 q.pop();
 
-                // sum += currentNode->val;
-
                 currentNode->val = lvlSum - currentNode->val;
 
                 int sibling =

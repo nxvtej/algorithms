@@ -24,7 +24,11 @@ public:
 int main(void)
 {
     both_codes roll_no1, roll_no2;
+
     cin >> roll_no1 >> roll_no2;
     cout << roll_no1 << roll_no2;
+
+    string name = "";
+    cin >> name;
     return 0;
 }

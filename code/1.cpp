@@ -1,25 +1,23 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int N = 1e5+10;
-// vector<int> tree[N];
-int par[N];
 
-int main(){
-	int number_of_nodes;
-	cin>>number_of_nodes;
-	vector<int> tree[number_of_nodes];
-	for(int i=0;i<5-1;i++){
-		int x,y;
-		cin>>x>>y;
-		tree[x].push_back(y);
-		tree[y].push_back(x);
+int fibo(int n){
+	if(n == 0){
+		// printf("%d ", 0);
+		return 0;
+	} else if(n == 1){
+		// printf("%d ", 1);
+		return 1;
+	} else{
+		int ele = fibo(n-1) + fibo(n-2);
+		printf("%d ", ele);
+		return ele;
 	}
+}
+int main() {
 
-	// to check if it's working properly let's print all the nodes;
-	for(int i=1;i<=5;i++){
-		for(auto child: tree[i]){
-			cout<<child<<" ";
-		}
-		cout<<endl;
-	}
+	int n ;
+	cin>>n;
+
+	printf("\n%d", fibo(n));
 }

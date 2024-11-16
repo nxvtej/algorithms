@@ -23,7 +23,7 @@ class operator_new
 
     void operator ++ ()
     {
-        ++pnumber ; 
+        ++pnumber ;
         ++dnumber ;
     }
 };
@@ -34,12 +34,12 @@ void operator_new :: print_data()
     cout<<"pnumber = "<<pnumber<<endl;
     cout<<"dnumber = "<<dnumber<<endl;
     // cout<<"code ends here ! ";
-} 
+}
 
 int main(void)
 {
     cout<<"initial values "<<endl;
-    operator_new navdeep(22 , 32) ; 
+    operator_new navdeep(22 , 32) ;
     navdeep.print_data();
 
     cout<<"values after the ++ operator overloading "<<endl;
@@ -50,21 +50,21 @@ int main(void)
 }
 */
 // post increment operator via member function
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class operator_new
 {
-    private :
-    int pnumber , dnumber ;
+private:
+    int pnumber, dnumber;
 
-    public :
+public:
     operator_new()
     {
-        pnumber = 0 ;
-        dnumber = 0 ;
+        pnumber = 0;
+        dnumber = 0;
     }
-    operator_new(int pnumber , int dnumber)
+    operator_new(int pnumber, int dnumber)
     {
         this->pnumber = pnumber;
         this->dnumber = dnumber;
@@ -72,30 +72,30 @@ class operator_new
 
     void print_data();
 
-    void operator ++ (int)
+    void operator++(int)
     {
-        pnumber++ ; 
-        dnumber++ ;
+        pnumber++;
+        dnumber++;
     }
 };
 
-void operator_new :: print_data()
+void operator_new ::print_data()
 {
     // cout<<"here is the result "<<endl;
-    cout<<"pnumber = "<<pnumber<<endl;
-    cout<<"dnumber = "<<dnumber<<endl;
+    cout << "pnumber = " << pnumber << endl;
+    cout << "dnumber = " << dnumber << endl;
     // cout<<"code ends here ! ";
-} 
+}
 
 int main(void)
 {
-    cout<<"initial values "<<endl;
-    operator_new navdeep(22 , 32) ; 
+    cout << "initial values " << endl;
+    operator_new navdeep(22, 32);
     navdeep.print_data();
 
-    cout<<"values after the ++ operator overloading "<<endl;
+    cout << "values after the ++ operator overloading " << endl;
     navdeep++;
     navdeep.print_data();
 
-    cout<<"code ends\n";
+    cout << "code ends\n";
 }

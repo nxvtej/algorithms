@@ -1,19 +1,20 @@
-z zc zcb zcbd zcbdx zcbdxa c cb cbd cbdx cbdxa b bd bdx bdxa d dx dxa x xa a 
+Test Case 1:
+Grid Size: 2x2
+Result: 1000000003
+Time taken: 0 ms
 
+Test Case 2:
+Grid Size: 100x100
+Result: 198000002
+Time taken: 21 ms
 
-a
-b
-bd
-bdx
-bdxa
-c
-cb
-cbd
-cbdx
-cbdxa
-d
-dx
-dxa
-x
-xa
-z
+Test Case 3:
+Grid Size: 750x750
+Result: 1000002247
+Time taken: 1742 ms
+
+Test Case 4:
+Grid Size: 750x750
+Result: 1000002234
+Time taken: 1677 ms
+
